@@ -1,0 +1,43 @@
+#pagination-demo {
+  display: flex;
+  list-style: none;
+  margin-top: 30px;
+  float: right;
+}
+
+#pagination-demo li {
+  margin-right: 10px;
+  padding: 3px;
+}
+
+#pagination-demo li a {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  font-size: 14px;
+}
+
+#pagination-demo .active {
+  background: #22223b;
+}
+
+#pagination-demo .active a {
+  color: white !important;
+}
+
+#pagination-demo .first,
+#pagination-demo .prev,
+#pagination-demo .next,
+#pagination-demo .last {
+  background: #eee;
+}
+
+#pagination-demo .prev,
+#pagination-demo .next {
+  background: #22223b;
+}
+
+#pagination-demo .prev a,
+#pagination-demo .next a {
+  color: white;
+}/*# sourceMappingURL=Pagination.css.map */

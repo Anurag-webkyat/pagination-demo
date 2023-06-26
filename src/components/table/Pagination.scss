@@ -1,0 +1,46 @@
+.pagination-holder {
+  float: right;
+  .pagination {
+    display: flex;
+    list-style: none;
+    float: right;
+
+    li {
+      margin-right: 10px;
+      padding: 3px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      a {
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+        font-size: 14px;
+      }
+    }
+
+    .active {
+      background: #22223b;
+
+      a {
+        color: white !important;
+      }
+    }
+
+    .first,
+    .prev,
+    .next,
+    .last {
+      background: #eee;
+    }
+
+    .prev,
+    .next {
+      background: #22223b;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
