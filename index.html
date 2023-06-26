@@ -1,50 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/App.css">
-    <title>Document</title>
+    <title>User Data Pagination</title>
+    <!-- <link rel="stylesheet" type="text/css" href="tws_pagination.css"> -->
+    <style>
+        /* Table styles */
+        #userTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        #userTable th,
+        #userTable td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+    
+        #userTable th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    
+        /* Alternate row colors */
+        #userTable tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 
-<body data-barba="wrapper">
-    <main data-barba="container" data-barba-namespace="Home">
-        <div class="container">
-            <!-- table component -->
-            <h1>Table</h1>
-            <table id="user">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+<body>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Questions</th>
+                <th>Answers</th>
+            </tr>
+        </thead>
+        <tbody>
 
-            <br />
-            <br />
+        </tbody>
+    </table>
+    <div id="pagination" class="tws-pagination"></div>
 
-            <h2>Selectbox</h2>
-            <!-- select box -->
-            <!-- <div class="w-dropdown-holder">
-
-            </div> -->
-
-            <!-- test code -->
-            <select name="" class="my-select">
-                <option value="1">helo</option>
-                <option value="2">mellow</option>
-            </select>
-
-        </div>
-    </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./src/App.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js" integrity="sha512-frFP3ZxLshB4CErXkPVEXnd5ingvYYtYhE5qllGdZmcOlRKNEPbufyupfdSTNmoF5ICaQNO6SenXzOZvoGkiIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
