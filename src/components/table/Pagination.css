@@ -1,43 +1,41 @@
-#pagination-demo {
-  display: flex;
-  list-style: none;
-  margin-top: 30px;
+.pagination-holder {
   float: right;
 }
-
-#pagination-demo li {
+.pagination-holder .pagination {
+  display: flex;
+  list-style: none;
+  float: right;
+}
+.pagination-holder .pagination li {
   margin-right: 10px;
   padding: 3px;
 }
-
-#pagination-demo li a {
+.pagination-holder .pagination li:last-child {
+  margin-right: 0px;
+}
+.pagination-holder .pagination li a {
   text-decoration: none;
   padding: 10px;
   color: black;
   font-size: 14px;
 }
-
-#pagination-demo .active {
+.pagination-holder .pagination .active {
   background: #22223b;
 }
-
-#pagination-demo .active a {
+.pagination-holder .pagination .active a {
   color: white !important;
 }
-
-#pagination-demo .first,
-#pagination-demo .prev,
-#pagination-demo .next,
-#pagination-demo .last {
+.pagination-holder .pagination .first,
+.pagination-holder .pagination .prev,
+.pagination-holder .pagination .next,
+.pagination-holder .pagination .last {
   background: #eee;
 }
-
-#pagination-demo .prev,
-#pagination-demo .next {
+.pagination-holder .pagination .prev,
+.pagination-holder .pagination .next {
   background: #22223b;
 }
-
-#pagination-demo .prev a,
-#pagination-demo .next a {
+.pagination-holder .pagination .prev a,
+.pagination-holder .pagination .next a {
   color: white;
 }/*# sourceMappingURL=Pagination.css.map */

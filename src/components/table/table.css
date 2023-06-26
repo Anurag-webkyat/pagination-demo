@@ -1,0 +1,198 @@
+.table-holder {
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  table-layout: fixed;
+  overflow: hidden;
+  background: white;
+  padding: 10px;
+}
+
+table caption {
+  font-size: 1.5em;
+}
+
+table tr {
+  border: 1px solid rgba(221, 221, 221, 0.418);
+}
+table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+table tr .block {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+table th,
+table td {
+  padding: 5px 20px;
+  text-align: left;
+}
+
+table tbody tr:nth-child(odd) {
+  background: rgb(243, 243, 243);
+}
+
+table th {
+  color: rgba(55, 72, 95, 0.8392156863);
+}
+
+table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px !important;
+  font-weight: 400;
+  color: rgba(55, 72, 95, 0.8392156863);
+}
+
+.actions {
+  display: flex;
+  height: 100%;
+}
+.actions a {
+  text-decoration: none;
+  color: black;
+}
+.actions .table-action-button {
+  display: block;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.1176470588);
+  margin-right: 10px;
+}
+.actions .table-action-button:hover {
+  background: #2f3542;
+  color: white !important;
+}
+.actions .delete-action {
+  color: #CF3161;
+}
+.actions .view-action {
+  color: #188A94;
+}
+.actions .edit-action {
+  color: #2A374A;
+}
+.actions .block-action {
+  color: orange;
+}
+
+table th {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+  }
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+.table-empty {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0px;
+  padding-bottom: 80px;
+  margin-top: -10px;
+}
+.table-empty img {
+  width: 60px;
+}
+.table-empty h3 {
+  font-weight: 400;
+  font-size: 28px;
+  color: rgba(55, 72, 95, 0.8392156863);
+}
+.table-empty a {
+  text-decoration: none;
+  background: #2f3542;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  top: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#progress {
+  z-index: 1;
+  top: 0;
+  left: -6px;
+  width: 1%;
+  height: 3px;
+  background-color: #2f3542;
+  position: absolute;
+  border-radius: 1px;
+  transition: width 1000ms ease-out, opacity 500ms linear;
+}
+#progress b, #progress i {
+  position: absolute;
+  top: 0;
+  height: 3px;
+  -ms-box-shadow: #777777 1px 0 6px 1px;
+  box-shadow: #777777 1px 0 6px 1px;
+  border-radius: 100%;
+}
+#progress b {
+  clip: rect(-6px, 22px, 14px, 10px);
+  opacity: 0.6;
+  width: 20px;
+  right: 0;
+}
+#progress i {
+  clip: rect(-6px, 90px, 14px, -6px);
+  opacity: 0.6;
+  width: 180px;
+  right: -80px;
+}/*# sourceMappingURL=table.css.map */

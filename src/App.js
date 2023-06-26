@@ -5,7 +5,6 @@ window.$ = $;
 
 import Barba from '@barba/core';
 import axios from "axios";
-import "./App.scss"
 import Dropdown from './components/Dropdown/Dropdown';
 import Table from './components/table/Table';
 import Toaster from './components/Toaster/Toaster';
