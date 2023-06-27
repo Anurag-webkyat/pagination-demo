@@ -5,7 +5,7 @@ $(document).ready(function () {
         const startCount = (page - 1) * itemsPerPage + 1;
         axios.get('get_users.php?page=' + page + '&perPage=' + itemsPerPage + '&startCount=' + startCount)
             .then(function (response) {
-                // console.log(response.data);
+                console.log(response.data);
                 const data = response.data.data;
                 data.map((x, i) => {
                     const { id, answer, question } = x;
@@ -23,6 +23,7 @@ $(document).ready(function () {
                 $('#pagination').twbsPagination({
                     totalPages: response.data.totalPages,
                     visiblePages: 5,
+                    initiateStartPageClick: false,
                     onPageClick: function (event, page) {
                         // Fetch the data for the selected page
                         fetchData(page, 10);
